@@ -1,3 +1,3 @@
-C:/Users/b_sen/Documents/CLionProjects/Betriebssysteme_und_Verteilte_Systeme_Projekte/cmake-build-debug/CMakeFiles/Betriebssysteme_und_Verteilte_Systeme_Projekte.dir
-C:/Users/b_sen/Documents/CLionProjects/Betriebssysteme_und_Verteilte_Systeme_Projekte/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/b_sen/Documents/CLionProjects/Betriebssysteme_und_Verteilte_Systeme_Projekte/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Danya/CLionProjects/Betriebssysteme_und_Verteilte_Systeme_Projekte/cmake-build-debug/CMakeFiles/Betriebssysteme_und_Verteilte_Systeme_Projekte.dir
+C:/Users/Danya/CLionProjects/Betriebssysteme_und_Verteilte_Systeme_Projekte/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Danya/CLionProjects/Betriebssysteme_und_Verteilte_Systeme_Projekte/cmake-build-debug/CMakeFiles/rebuild_cache.dir
