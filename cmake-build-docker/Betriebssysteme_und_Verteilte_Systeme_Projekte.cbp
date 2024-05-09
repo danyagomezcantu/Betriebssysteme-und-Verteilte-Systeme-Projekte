@@ -8,28 +8,28 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/tmp/tmp.Mu2F2ILiPv/cmake-build-docker"/>
+				<Option working_dir="/tmp/PrakBS21/cmake-build-docker"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j20 -f &quot;/tmp/tmp.Mu2F2ILiPv/cmake-build-docker/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j20 -f &quot;/tmp/tmp.Mu2F2ILiPv/cmake-build-docker/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j20 -f &quot;/tmp/tmp.Mu2F2ILiPv/cmake-build-docker/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j20 -f &quot;/tmp/tmp.Mu2F2ILiPv/cmake-build-docker/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j20 -f &quot;/tmp/PrakBS21/cmake-build-docker/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j20 -f &quot;/tmp/PrakBS21/cmake-build-docker/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j20 -f &quot;/tmp/PrakBS21/cmake-build-docker/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j20 -f &quot;/tmp/PrakBS21/cmake-build-docker/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/tmp/tmp.Mu2F2ILiPv/cmake-build-docker"/>
+				<Option working_dir="/tmp/PrakBS21/cmake-build-docker"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j20 -f &quot;/tmp/tmp.Mu2F2ILiPv/cmake-build-docker/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j20 -f &quot;/tmp/tmp.Mu2F2ILiPv/cmake-build-docker/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j20 -f &quot;/tmp/tmp.Mu2F2ILiPv/cmake-build-docker/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j20 -f &quot;/tmp/tmp.Mu2F2ILiPv/cmake-build-docker/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j20 -f &quot;/tmp/PrakBS21/cmake-build-docker/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j20 -f &quot;/tmp/PrakBS21/cmake-build-docker/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j20 -f &quot;/tmp/PrakBS21/cmake-build-docker/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j20 -f &quot;/tmp/PrakBS21/cmake-build-docker/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Betriebssysteme_und_Verteilte_Systeme_Projekte">
-				<Option output="/tmp/tmp.Mu2F2ILiPv/cmake-build-docker/Betriebssysteme_und_Verteilte_Systeme_Projekte" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/tmp/tmp.Mu2F2ILiPv/cmake-build-docker"/>
+				<Option output="/tmp/PrakBS21/cmake-build-docker/Betriebssysteme_und_Verteilte_Systeme_Projekte" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/tmp/PrakBS21/cmake-build-docker"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -41,15 +41,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j20 -f &quot;/tmp/tmp.Mu2F2ILiPv/cmake-build-docker/Makefile&quot;  VERBOSE=1 Betriebssysteme_und_Verteilte_Systeme_Projekte"/>
-					<CompileFile command="/usr/bin/make -j20 -f &quot;/tmp/tmp.Mu2F2ILiPv/cmake-build-docker/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j20 -f &quot;/tmp/tmp.Mu2F2ILiPv/cmake-build-docker/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j20 -f &quot;/tmp/tmp.Mu2F2ILiPv/cmake-build-docker/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j20 -f &quot;/tmp/PrakBS21/cmake-build-docker/Makefile&quot;  VERBOSE=1 Betriebssysteme_und_Verteilte_Systeme_Projekte"/>
+					<CompileFile command="/usr/bin/make -j20 -f &quot;/tmp/PrakBS21/cmake-build-docker/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j20 -f &quot;/tmp/PrakBS21/cmake-build-docker/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j20 -f &quot;/tmp/PrakBS21/cmake-build-docker/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Betriebssysteme_und_Verteilte_Systeme_Projekte/fast">
-				<Option output="/tmp/tmp.Mu2F2ILiPv/cmake-build-docker/Betriebssysteme_und_Verteilte_Systeme_Projekte" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/tmp/tmp.Mu2F2ILiPv/cmake-build-docker"/>
+				<Option output="/tmp/PrakBS21/cmake-build-docker/Betriebssysteme_und_Verteilte_Systeme_Projekte" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/tmp/PrakBS21/cmake-build-docker"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -61,27 +61,39 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j20 -f &quot;/tmp/tmp.Mu2F2ILiPv/cmake-build-docker/Makefile&quot;  VERBOSE=1 Betriebssysteme_und_Verteilte_Systeme_Projekte/fast"/>
-					<CompileFile command="/usr/bin/make -j20 -f &quot;/tmp/tmp.Mu2F2ILiPv/cmake-build-docker/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j20 -f &quot;/tmp/tmp.Mu2F2ILiPv/cmake-build-docker/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j20 -f &quot;/tmp/tmp.Mu2F2ILiPv/cmake-build-docker/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j20 -f &quot;/tmp/PrakBS21/cmake-build-docker/Makefile&quot;  VERBOSE=1 Betriebssysteme_und_Verteilte_Systeme_Projekte/fast"/>
+					<CompileFile command="/usr/bin/make -j20 -f &quot;/tmp/PrakBS21/cmake-build-docker/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j20 -f &quot;/tmp/PrakBS21/cmake-build-docker/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j20 -f &quot;/tmp/PrakBS21/cmake-build-docker/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/tmp/tmp.Mu2F2ILiPv/cmake-build-docker"/>
+				<Option working_dir="/tmp/PrakBS21/cmake-build-docker"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j20 -f &quot;/tmp/tmp.Mu2F2ILiPv/cmake-build-docker/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j20 -f &quot;/tmp/tmp.Mu2F2ILiPv/cmake-build-docker/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j20 -f &quot;/tmp/tmp.Mu2F2ILiPv/cmake-build-docker/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j20 -f &quot;/tmp/tmp.Mu2F2ILiPv/cmake-build-docker/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j20 -f &quot;/tmp/PrakBS21/cmake-build-docker/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j20 -f &quot;/tmp/PrakBS21/cmake-build-docker/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j20 -f &quot;/tmp/PrakBS21/cmake-build-docker/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j20 -f &quot;/tmp/PrakBS21/cmake-build-docker/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/tmp/tmp.Mu2F2ILiPv/main.c">
+		<Unit filename="/tmp/PrakBS21/keyValStore.c">
 			<Option target="Betriebssysteme_und_Verteilte_Systeme_Projekte"/>
 		</Unit>
-		<Unit filename="/tmp/tmp.Mu2F2ILiPv/CMakeLists.txt">
+		<Unit filename="/tmp/PrakBS21/keyValStore.h">
+			<Option target="Betriebssysteme_und_Verteilte_Systeme_Projekte"/>
+		</Unit>
+		<Unit filename="/tmp/PrakBS21/main.c">
+			<Option target="Betriebssysteme_und_Verteilte_Systeme_Projekte"/>
+		</Unit>
+		<Unit filename="/tmp/PrakBS21/sub.c">
+			<Option target="Betriebssysteme_und_Verteilte_Systeme_Projekte"/>
+		</Unit>
+		<Unit filename="/tmp/PrakBS21/sub.h">
+			<Option target="Betriebssysteme_und_Verteilte_Systeme_Projekte"/>
+		</Unit>
+		<Unit filename="/tmp/PrakBS21/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

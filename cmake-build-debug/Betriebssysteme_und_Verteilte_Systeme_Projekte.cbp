@@ -85,6 +85,9 @@
 		<Unit filename="C:/Users/b_sen/Documents/CLionProjects/Betriebssysteme_und_Verteilte_Systeme_Projekte/main.c">
 			<Option target="Betriebssysteme_und_Verteilte_Systeme_Projekte"/>
 		</Unit>
+		<Unit filename="C:/Users/b_sen/Documents/CLionProjects/Betriebssysteme_und_Verteilte_Systeme_Projekte/main.h">
+			<Option target="Betriebssysteme_und_Verteilte_Systeme_Projekte"/>
+		</Unit>
 		<Unit filename="C:/Users/b_sen/Documents/CLionProjects/Betriebssysteme_und_Verteilte_Systeme_Projekte/sub.c">
 			<Option target="Betriebssysteme_und_Verteilte_Systeme_Projekte"/>
 		</Unit>

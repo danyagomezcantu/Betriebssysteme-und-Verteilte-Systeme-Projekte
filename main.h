@@ -1,8 +1,9 @@
-#ifndef SUB_H
-#define SUB_H
+#ifndef MAIN_H
+#define MAIN_H
 
 #include "keyValStore.h"
+#include "sub.h"
 
 void process_command(char* buffer, int connfd);
 
-#endif  // SUB_H
+#endif  // MAIN_H

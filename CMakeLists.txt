@@ -7,4 +7,5 @@ add_executable(Betriebssysteme_und_Verteilte_Systeme_Projekte main.c
         sub.c
         sub.h
         keyValStore.c
-        keyValStore.h)
+        keyValStore.h
+        main.h)
