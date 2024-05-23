@@ -1,3 +1,0 @@
-/tmp/tmp.NJORodVqfr/cmake-build-docker-danya/CMakeFiles/rebuild_cache.dir
-/tmp/tmp.NJORodVqfr/cmake-build-docker-danya/CMakeFiles/Betriebssysteme_und_Verteilte_Systeme_Projekte.dir
-/tmp/tmp.NJORodVqfr/cmake-build-docker-danya/CMakeFiles/edit_cache.dir
