@@ -69,6 +69,10 @@ and it's necessary to ensure orderly access and prevent collisions.
   Semaphores regulate the access of multiple threads or 
   processes to the shared memory and maintain controlled 
   concurrent access.
+  <br> <br>
+  - #### **[IMPORTANT]** Add these two lines in CMakeLists.txt:
+    - find_package(Threads REQUIRED)
+    - target_link_libraries(Betriebssysteme_und_Verteilte_Systeme_Projekte Threads::Threads)
 <br>
 <br>
 <br>
