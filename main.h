@@ -1,9 +1,19 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#include "keyValStore.h"
-#include "sub.h"
+#include <semaphore.h>
 
-void process_command(char* buffer, int connfd);
+typedef struct {
+    char key[256];
+    char value[256];
+} KeyValue;
 
-#endif  // MAIN_H
+typedef struct {
+    KeyValue store[1024];
+    int store_size;
+    sem_t semaphore;
+} SharedMemoryStruct;
+
+extern SharedMemoryStruct *shared_data;
+
+#endif

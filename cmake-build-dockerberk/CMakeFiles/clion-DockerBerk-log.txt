@@ -1,0 +1,4 @@
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /tmp/Betriebssysteme_und_Verteilte_Systeme_Projekte
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /tmp/Betriebssysteme_und_Verteilte_Systeme_Projekte/cmake-build-dockerberk
