@@ -76,10 +76,10 @@ int main() {
         close(sockfd);
         exit(1);
     }
-    /* The arrow operator is used to access the member variable store_size within
-     *          the structure or object pointed to by the pointer shared_data.
-     */
     shared_data->store_size = 0;
+    for (int i = 0; i < 1024; i++) {
+        shared_data->subscriptions[i].num_clients = 0;
+    }
 
     // Initialize semaphore
     if (sem_init(&shared_data->semaphore, 1, 1) < 0) {
