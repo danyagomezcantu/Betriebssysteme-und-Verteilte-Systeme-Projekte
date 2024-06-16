@@ -2,17 +2,14 @@
 <project version="4">
   <component name="PublishConfigData" remoteFilesAllowedToDisappearOnAutoupload="false">
     <serverData>
-      <paths name="Remote Host (235f027f-aed2-4dce-a34c-84c2897b073a)">
+      <paths name="Remote Host (7d8a70e7-7c6a-41ba-a456-71ad90d4397b)">
         <serverdata>
           <mappings>
-            <mapping deploy="/tmp/Betriebssysteme_und_Verteilte_Systeme_Projekte" local="$PROJECT_DIR$" />
+            <mapping deploy="/tmp/tmp.wczSEiMA15" local="$PROJECT_DIR$" />
           </mappings>
           <excludedPaths>
-            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug" />
             <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-docker" />
-            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-dockerberk" />
-            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-dockerberk" />
-            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-docker-remote-host" />
           </excludedPaths>
         </serverdata>
       </paths>
