@@ -7,20 +7,25 @@
 #include "main.h"
 
 void notify_subscribers(char* key, char* value, char* operation) {
+    printf("Notifying subscribers for key %s with operation %s and value %s\n", key, operation, value); // Debug log
     for (int i = 0; i < shared_data->subscription_count; i++) {
         if (strcmp(shared_data->subscriptions[i].key, key) == 0) {
             for (int j = 0; j < shared_data->subscriptions[i].count; j++) {
                 int client_fd = shared_data->subscriptions[i].client_fds[j];
                 char message[512];
                 snprintf(message, sizeof(message), "%s:%s:%s\n", operation, key, value);
+                printf("Notifying client %d: %s\n", client_fd, message); // Debug log
                 write(client_fd, message, strlen(message));
             }
         }
     }
 }
 
+
+
 int subscribe(char* key, int connfd) {
     sem_wait(&shared_data->semaphore);  // Lock
+    printf("Subscribing client %d to key %s\n", connfd, key); // Debug log
 
     for (int i = 0; i < shared_data->subscription_count; i++) {
         if (strcmp(shared_data->subscriptions[i].key, key) == 0) {
@@ -49,6 +54,7 @@ int subscribe(char* key, int connfd) {
     // Subscription list is full
     return -1;
 }
+
 
 
 int put(char* key, char* value) {
