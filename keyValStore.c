@@ -4,37 +4,26 @@
 #include <unistd.h>
 #include "main.h"
 
-<<<<<<< HEAD
-void notify_subscribers(char* key, char* value, char* operation) {
-    printf("Notifying subscribers for key %s with operation %s and value %s\n", key, operation, value); // Debug log
-=======
 void notify_subscribers(char* key, char* value, char* operation, int excluding_fd) {
     printf("Notifying subscribers for key: %s, operation: %s, value: %s\n", key, operation, value);
->>>>>>> 545bce6fda2680b18427c0c940d9e9b386e46d77
     for (int i = 0; i < shared_data->subscription_count; i++) {
         if (strcmp(shared_data->subscriptions[i].key, key) == 0) {
             printf("Found subscription for key: %s\n", key);
             for (int j = 0; j < shared_data->subscriptions[i].count; j++) {
                 int client_fd = shared_data->subscriptions[i].client_fds[j];
-<<<<<<< HEAD
-                char message[512];
-                snprintf(message, sizeof(message), "%s:%s:%s\n", operation, key, value);
-                printf("Notifying client %d: %s\n", client_fd, message); // Debug log
-                write(client_fd, message, strlen(message));
-=======
                 if (client_fd != excluding_fd) {
                     char message[512];
                     snprintf(message, sizeof(message), "%s:%s:%s\n", operation, key, value);
-                    printf("Sending notification to fd %d: %s", client_fd, message);
+                    printf("Notifying client %d: %s\n", client_fd, message); // Debug log
                     if (write(client_fd, message, strlen(message)) < 0) {
                         perror("write");
                     }
                 }
->>>>>>> 545bce6fda2680b18427c0c940d9e9b386e46d77
             }
         }
     }
 }
+
 
 
 
@@ -74,13 +63,7 @@ int subscribe(char* key, int connfd) {
     return -1;
 }
 
-<<<<<<< HEAD
-
-
-int put(char* key, char* value) {
-=======
 int put(char* key, char* value, int connfd) {
->>>>>>> 545bce6fda2680b18427c0c940d9e9b386e46d77
     sem_wait(&shared_data->semaphore);  // Lock
     printf("Executing PUT for key: %s, value: %s\n", key, value);
 
@@ -108,6 +91,7 @@ int put(char* key, char* value, int connfd) {
     printf("Store is full, cannot add key %s\n", key);
     return -1;
 }
+
 
 int get(char* key, char* res) {
     sem_wait(&shared_data->semaphore);  // Lock
