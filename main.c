@@ -37,8 +37,16 @@ void handle_client(int connfd) {
     close(connfd);
 }
 
+void* client_handler_thread(void* arg) {
+    int connfd = *((int *)arg);
+    handle_client(connfd);
+    close(connfd);
+    free(arg);
+    return NULL;
+}
+
 int main() {
-    int sockfd, connfd;
+    int sockfd, *connfd;
     struct sockaddr_in servaddr, cliaddr;
     socklen_t clilen;
 
@@ -50,7 +58,6 @@ int main() {
     }
 
     // Set address for the server
-    // IP: 127.0.0.1
     servaddr.sin_family = AF_INET;
     servaddr.sin_port = htons(PORT);
     inet_pton(AF_INET, "127.0.0.1", &servaddr.sin_addr);
@@ -76,10 +83,15 @@ int main() {
         close(sockfd);
         exit(1);
     }
+<<<<<<< HEAD
+=======
     /* The arrow operator is used to access the member variable store_size within
      *          the structure or object pointed to by the pointer shared_data.
      */
     shared_data->store_size = 0;
+>>>>>>> 545bce6fda2680b18427c0c940d9e9b386e46d77
+    shared_data->subscription_count = 0;
+
 
     // Initialize semaphore
     if (sem_init(&shared_data->semaphore, 1, 1) < 0) {
@@ -93,27 +105,17 @@ int main() {
 
     while (1) {
         clilen = sizeof(cliaddr);
-        connfd = accept(sockfd, (struct sockaddr *)&cliaddr, &clilen);
-        if (connfd < 0) {
+        connfd = malloc(sizeof(int));
+        *connfd = accept(sockfd, (struct sockaddr *)&cliaddr, &clilen);
+        if (*connfd < 0) {
             perror("accept failed");
+            free(connfd);
             continue;
         }
 
-        // Create a new process to handle the client ---> fork()
-        pid_t pid = fork();
-        if (pid < 0) {
-            perror("fork failed");
-            close(connfd);
-            continue;
-        }
-
-        if (pid == 0) { // Child process
-            close(sockfd);
-            handle_client(connfd);
-            exit(0);
-        } else { // Parent process
-            close(connfd);
-        }
+        pthread_t tid;
+        pthread_create(&tid, NULL, client_handler_thread, connfd);
+        pthread_detach(tid);
     }
 
     // Clean up

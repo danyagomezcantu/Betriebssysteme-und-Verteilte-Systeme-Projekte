@@ -6,47 +6,41 @@
 
 #include "keyValStore.h"
 
-void process_command(char* buffer, int connfd) {
-    char command[256], key[256], value[256];
-    sscanf(buffer, "%s %s %s", command, key, value);
+void process_command(char* command, int connfd) {
+    char key[256];
+    char value[256];
+    char operation[256];
 
-    // Check if the command is GET
-    if (strcmp(command, "GET") == 0) {
-        char res[256];
-        // Retrieve the value assigned to key
-        int ret = get(key, res);
-        // If key exists, send the value to client
-        if (ret == 0) {
-            send(connfd, res, strlen(res), 0);
-            send(connfd, "\n", 1, 0);
-        } else {
-            // If key does not exist, then inform
-            send(connfd, "key_nonexistent\n", strlen("key_nonexistent\n"), 0);
-        }
-    } else if (strcmp(command, "PUT") == 0) {
-        int ret = put(key, value);
-        if (ret == 0) {
-            char response[256];
+    if (sscanf(command, "PUT %s %s", key, value) == 2) {
+        if (put(key, value, connfd) == 0) {
+            char response[512];
             snprintf(response, sizeof(response), "PUT:%s:%s\n", key, value);
-            send(connfd, response, strlen(response), 0);
+            write(connfd, response, strlen(response));
         } else {
-            send(connfd, "error_put", strlen("error_put"), 0);
+            write(connfd, "PUT failed\n", 11);
         }
-    } else if (strcmp(command, "DEL") == 0) {
-        int ret = del(key);
-        if (ret == 0) {
-            char response[256];
+    } else if (sscanf(command, "GET %s", key) == 1) {
+        if (get(key, value) == 0) {
+            write(connfd, value, strlen(value));
+            write(connfd, "\n", 1);
+        } else {
+            write(connfd, "key_nonexistent\n", 16);
+        }
+    } else if (sscanf(command, "DEL %s", key) == 1) {
+        if (del(key, connfd) == 0) {
+            char response[512];
             snprintf(response, sizeof(response), "DEL:%s:key_deleted\n", key);
-            send(connfd, response, strlen(response), 0);
+            write(connfd, response, strlen(response));
         } else {
-            char response[256];
-            snprintf(response, sizeof(response), "DEL:%s:key_nonexistent\n", key);
-            send(connfd, response, strlen(response), 0);
+            write(connfd, "key_nonexistent\n", 16);
         }
-    } else if (strcmp(command, "QUIT") == 0) {
-        // Close connection
-        close(connfd);
+    } else if (sscanf(command, "SUB %s", key) == 1) {
+        if (subscribe(key, connfd) == 0) {
+            write(connfd, "SUB successful\n", 15);
+        } else {
+            write(connfd, "SUB failed\n", 11);
+        }
     } else {
-        send(connfd, "invalid_command", strlen("invalid_command"), 0);
+        write(connfd, "Unknown command\n", 16);
     }
 }
